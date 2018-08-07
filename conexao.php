@@ -1,5 +1,5 @@
 <?php
-$conexao = mysql_connect('localhost', 'root', 'usbw');
+$conexao = mysql_connect('localhost', 'acayaba');
 if($conexao)
 {
 	if (! mysql_select_db('biblioteca',$conexao)) {
