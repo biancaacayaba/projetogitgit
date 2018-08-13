@@ -7,6 +7,7 @@ $sql = "insert into livros (nome,autor,genero) values ('$nome','$autor','$genero
 if(mysql_query($sql,$conexao))
 {
 	echo"<script>alert('Registro incluido')</script>";
+	
 
 }
 else
@@ -16,4 +17,4 @@ else
 	die("<p>$sql</p>");
 }
 include('fecha.php');
-echo"<script>self.location='index.html'</script>";
+echo"<script>self.location='tabela.php'</script>";
