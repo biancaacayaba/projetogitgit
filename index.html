@@ -3,7 +3,45 @@
 		<head>
 			<title>Função GitHub</title>
 				<meta charset="utf-8">
-					<link rel="stylesheet" type="text/css" href="livro.css">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  				<meta http-equiv="X-UA-Compatible" content="ie=edge">
+				<link rel="stylesheet" type="text/css" href="livro.css">
+					    <script type="text/javascript">
+                            
+                            function validar(){
+                                var nome = cadastro.nome.value;
+                                var autor = cadastro.autor.value;
+                                
+                                if(nome == "" || nome.length <= 1){
+                                    alert('O campo livro deve ser preenchido com no minimo 2 caracteres');
+                                    cadastro.nome.focus();
+                                    return false;
+                                }
+                                
+                                if(autor == ""){
+                                    alert('O campo autor deve ser preenchido');
+                                    cadastro.autor.focus();
+                                    return false;
+                                }
+                                
+                            }
+                            
+                            function sem_acento(e,args){
+                                    
+                                if (document.all){var evt=event.keyCode;}
+                                
+                                    else{var evt = e.charCode;}
+                                        var valid_chars = '0123456789abcdefghijlmnopqrstuvxzwykABCDEFGHIJLMNOPQRSTUVXZWYK-_/^~´`@.'+args;
+                                        var chr= String.fromCharCode(evt);
+       
+                                if (valid_chars.indexOf(chr)>-1 ){return true;}
+                                
+                                if (valid_chars.indexOf(chr)>-1 || evt < 9){return true;} 
+	
+                                if (valid_chars.indexOf(chr)>30 || evt <35){return true;}
+                                    return false;
+                             }
+                        </script>
 		</head>
 
 		<body>
@@ -11,19 +49,19 @@
 				<h2>Coleção de livros</h2>
 					<img src="https://pbs.twimg.com/profile_images/503696801161953281/IyV59ozo_400x400.png" width="200px" height="150px">
 				<br>
-				<form action="inserir.php" method="post">
+				<form name="cadastro" action="inserir.php" method="post">
 					<label for="nome">Nome do livro:</label>
-						<input name="nome" id="nome" type="text" placeholder="nome">
+						<input name="nome" id="nome" type="text" placeholder="nome" >
 				<br>
 				<br>
 					<label for="autor">Autor:</label>
-						<input name="autor" id="autor" type="text" placeholder="autor">
+						<input name="autor" id="autor" type="text" placeholder="autor" onKeyPress="return sem_acento(event);">
 				<br>
 				<br>
 					<label> Genero:</label>
 						<input name="genero" id="genero" type="text">
 		        <br>
-				<input value="Enviar" class="button" type="submit">
+				<input onclick="return validar()" class="button" type="submit">
 				</form>
 			</div>
 		</body>
