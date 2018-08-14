@@ -1,6 +1,11 @@
     <meta charset="UTF-8">
 			<img src="https://pbs.twimg.com/profile_images/503696801161953281/IyV59ozo_400x400.png" width="200px" height="150px">
 				<link rel="stylesheet" type="text/css" href="livro.css">
+				<style type="text/css">
+					  table{
+        	background-color: white;
+        	}
+				</style>
 <?php
 include('conexao.php');
 $sql = "select * from livros";
@@ -12,7 +17,7 @@ $linha = mysql_num_rows($resultado);
 		die('table livros vazia');
 	}
 echo 
-'<table border="1">
+'<table border="1" id="banana"><br><br>
 <th>Código</th>
 <th>Nome</th>
 <th>Autor</th>
