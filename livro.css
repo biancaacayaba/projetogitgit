@@ -1,0 +1,57 @@
+		body {
+			background: #A6A59B;
+			}
+
+		img {
+			padding-top: -50px;
+			padding-right: 65px;
+			float: right;
+			}
+
+		.books {
+			background-color: white;
+			width: 320px;
+			height: 400px;
+			border-radius: 10px;
+			}
+
+		.books h2 {
+			font-size: 25px;
+			text-align: center;
+			}
+
+		form label{
+			float: left;
+			font-family: ARIAL;
+			}
+		
+		.form-control{
+			margin-left: 44px;
+			border-radius: 3px;
+			padding-top:5px;
+			padding-bottom: 5px;
+			}
+        .books input[type="submit"]{ 
+        	font-size: 15px !important ; 
+            color: white;
+            background: black;
+            text-align: center;
+            font-style: normal;
+            border: 1px solid gray;
+            border-width: 1px 1px 3px;
+            border-radius: 3px;
+            float: left;
+            margin-top: 50px;
+        	}
+
+        form {
+        	margin-left: 10px;
+			float: left;	
+        	}
+
+        form input {
+      		float: right;
+        	padding-left: -20px;
+            border-radius: 3px;
+            font-size: 15px;
+        	}	
